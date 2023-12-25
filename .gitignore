@@ -1,2 +1,6 @@
 # VsCode
 *.code-workspace
+
+# test files
+*.txt
+*metadata.json

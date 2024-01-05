@@ -4,3 +4,7 @@
 # test files
 *.txt
 *metadata.json
+
+# pycache
+**/__pycache__/
+

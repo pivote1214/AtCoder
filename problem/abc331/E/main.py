@@ -2,13 +2,7 @@
 import sys
 
 
-def solve(A: int, M: int, L: int, R: int):
-    L = L - A - 1
-    R = R - A
-
-    ans = R // M - L // M
-    print(ans)
-    
+def solve(N: int, M: int, L: int, a: "List[int]", b: "List[int]", c: "List[int]", d: "List[int]"):
     return
 
 
@@ -19,11 +13,17 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    A = int(next(tokens))  # type: int
+    N = int(next(tokens))  # type: int
     M = int(next(tokens))  # type: int
     L = int(next(tokens))  # type: int
-    R = int(next(tokens))  # type: int
-    solve(A, M, L, R)
+    a = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
+    b = [int(next(tokens)) for _ in range(M)]  # type: "List[int]"
+    c = [int()] * (L)  # type: "List[int]"
+    d = [int()] * (L)  # type: "List[int]"
+    for i in range(L):
+        c[i] = int(next(tokens))
+        d[i] = int(next(tokens))
+    solve(N, M, L, a, b, c, d)
 
 if __name__ == '__main__':
     main()

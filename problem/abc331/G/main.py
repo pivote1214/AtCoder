@@ -4,7 +4,7 @@ import sys
 MOD = 998244353  # type: int
 
 
-def solve(N: int):
+def solve(N: int, M: int, C: "List[int]"):
     return
 
 
@@ -16,7 +16,9 @@ def main():
                 yield word
     tokens = iterate_tokens()
     N = int(next(tokens))  # type: int
-    solve(N)
+    M = int(next(tokens))  # type: int
+    C = [int(next(tokens)) for _ in range(M)]  # type: "List[int]"
+    solve(N, M, C)
 
 if __name__ == '__main__':
     main()

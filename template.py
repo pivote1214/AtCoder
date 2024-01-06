@@ -5,13 +5,13 @@ import sys
 
 {% endif %}
 {% if mod %}
-MOD = {{ mod }}  # type: int
+MOD = {{ mod }}
 {% endif %}
 {% if yes_str %}
-YES = "{{ yes_str }}"  # type: str
+YES = "{{ yes_str }}"
 {% endif %}
 {% if no_str %}
-NO = "{{ no_str }}"  # type: str
+NO = "{{ no_str }}"
 {% endif %}
 {% if prediction_success %}
 
